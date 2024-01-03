@@ -51,8 +51,9 @@ const Auto = () =>{
                     style={{marginTop: '20px', marginBottom: '5px'}} 
                     className='custom-button' 
                     type='submit'
+                    disabled = {loading}
                 > 
-                    {loading ? <CircularProgress size={20} color="inherit" /> : 'NEXT'}
+                    {loading ? <CircularProgress size={24.5} color="inherit" /> : 'NEXT'}
                 </CustomButton>
 
             </form>

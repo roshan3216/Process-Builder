@@ -9,7 +9,7 @@ import { submitProcess } from '../api/api';
 import { useNavigate } from 'react-router-dom';
 import { CustomTextField, CustomButton } from '../utils/custom';
 
-const Manual = (props) =>{
+const Manual = () =>{
     const [inputs, setInputs] = useState([{title: "", description: "", metadata: ""}]);
     const navigate = useNavigate();
     const [prompt, setPrompt] = useState(JSON.parse(localStorage.getItem('prompt')));
@@ -28,6 +28,8 @@ const Manual = (props) =>{
                 obj['metadata'] = '';
                 temp.push(obj);
             });
+
+            console.log(temp,'[temp]');
         
             temp.length ? setInputs(temp) : setInputs([{title: "", description: "", metadata: ""}]);
         }
@@ -104,6 +106,7 @@ const Manual = (props) =>{
                                 name='title'
                                 label='Title'
                                 type='text'
+                                value={item.title}
                                 onChange={(e) =>handleChange(e,index)}
                                 required
                                 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/home';
 import Auto from './pages/auto';
@@ -7,10 +7,6 @@ import './styles.css';
 
 
 function App (){
-    const [response, setResponse] = useState([]);
-    const [mode, setMode] = useState( null );
-    const [prompt , setPrompt] = useState('');
-
 
     return (
         <BrowserRouter>

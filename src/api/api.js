@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: "http://localhost:5000",
+    // baseURL: "http://localhost:5000/process",
+    baseURL : "https://process-builder-backend.onrender.com/process",
 });
 
 export const getAllProcesses = async ()=>{
